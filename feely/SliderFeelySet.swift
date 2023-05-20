@@ -15,7 +15,7 @@ struct SliderFeelySet: View {
     var body: some View {
         Rectangle()
             .fill(Color("myBlue"))
-            .frame(width: 350, height: 100)
+            .frame(width: 350, height: 87)
             .cornerRadius(20)
             .overlay {
                 HStack {

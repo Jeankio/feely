@@ -7,6 +7,24 @@ struct ProgressFeelysView: View {
         VStack {
             ProgressView(value: progressValue)
                 .progressViewStyle(FeelysProgressViewStyle(text: ""))
+            
+            switch progressValue {
+            case ..<0.4:
+                Text("Changos... 🥺")
+                    .bold()
+                    .font(.title3)
+                    .foregroundColor(.red)
+            case 0.5..<0.8:
+                Text("Hmmm... 😐")
+                    .bold()
+                    .font(.title3)
+                    .foregroundColor(.orange)
+            default:
+                Text("Great!.. 😁")
+                    .bold()
+                    .font(.title3)
+                    .foregroundColor(.green)
+            }
         }
     }
 }
@@ -25,8 +43,8 @@ struct FeelysProgressViewStyle: ProgressViewStyle {
                     .frame(height: 12.0)
                     .padding(.horizontal)
                 Text(text)
-                  .foregroundColor(.white)
-                  .padding(.leading, 8)
+                    .foregroundColor(.white)
+                    .padding(.leading, 8)
             }
         }
     }

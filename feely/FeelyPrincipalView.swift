@@ -5,7 +5,7 @@ struct FeelyPrincipalView: View {
     var body: some View {
         VStack {
             CardFeelyUser()
-                .frame(height: 350)
+                .frame(height: 430)
                 .shadow(radius: 5)
                 .cornerRadius(20)
                 .padding(.all)
@@ -21,7 +21,6 @@ struct FeelyPrincipalView: View {
         .background(Color("myGreen"))
     }
 }
-
 
 
 struct FeelyPrincipalView_Previews: PreviewProvider {
