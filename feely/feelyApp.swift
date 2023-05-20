@@ -11,7 +11,7 @@ import SwiftUI
 struct feelyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FeelyPrincipalView()
         }
     }
 }
