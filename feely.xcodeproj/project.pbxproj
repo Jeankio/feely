@@ -14,6 +14,8 @@
 		3C0604382A180B67003E79A0 /* ProgressFeelysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0604372A180B67003E79A0 /* ProgressFeelysView.swift */; };
 		3C06043A2A181438003E79A0 /* FeelyPrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0604392A181438003E79A0 /* FeelyPrincipalView.swift */; };
 		3C06043C2A196E7C003E79A0 /* SliderFeelySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06043B2A196E7C003E79A0 /* SliderFeelySet.swift */; };
+		3C6E71382A2BAD8F00DA6132 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3C6E71372A2BAD8F00DA6132 /* ComposableArchitecture */; };
+		3C6E713A2A2BAE5700DA6132 /* FeelyModelReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E71392A2BAE5700DA6132 /* FeelyModelReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		3C0604372A180B67003E79A0 /* ProgressFeelysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressFeelysView.swift; sourceTree = "<group>"; };
 		3C0604392A181438003E79A0 /* FeelyPrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelyPrincipalView.swift; sourceTree = "<group>"; };
 		3C06043B2A196E7C003E79A0 /* SliderFeelySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderFeelySet.swift; sourceTree = "<group>"; };
+		3C6E71392A2BAE5700DA6132 /* FeelyModelReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelyModelReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6E71382A2BAD8F00DA6132 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				3C0604292A17CEDE003E79A0 /* feelyApp.swift */,
+				3C6E71392A2BAE5700DA6132 /* FeelyModelReducer.swift */,
 				3C0604392A181438003E79A0 /* FeelyPrincipalView.swift */,
 				3C06042B2A17CEDE003E79A0 /* CardFeelyUserView.swift */,
 				3C0604372A180B67003E79A0 /* ProgressFeelysView.swift */,
@@ -92,6 +97,9 @@
 			dependencies = (
 			);
 			name = feely;
+			packageProductDependencies = (
+				3C6E71372A2BAD8F00DA6132 /* ComposableArchitecture */,
+			);
 			productName = feely;
 			productReference = 3C0604262A17CEDE003E79A0 /* feely.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 3C06041D2A17CEDE003E79A0;
+			packageReferences = (
+				3C6E71362A2BAD8F00DA6132 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 3C0604272A17CEDE003E79A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,6 +159,7 @@
 			files = (
 				3C06043C2A196E7C003E79A0 /* SliderFeelySet.swift in Sources */,
 				3C06042C2A17CEDE003E79A0 /* CardFeelyUserView.swift in Sources */,
+				3C6E713A2A2BAE5700DA6132 /* FeelyModelReducer.swift in Sources */,
 				3C06043A2A181438003E79A0 /* FeelyPrincipalView.swift in Sources */,
 				3C06042A2A17CEDE003E79A0 /* feelyApp.swift in Sources */,
 				3C0604382A180B67003E79A0 /* ProgressFeelysView.swift in Sources */,
@@ -351,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C6E71362A2BAD8F00DA6132 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C6E71372A2BAD8F00DA6132 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C6E71362A2BAD8F00DA6132 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C06041E2A17CEDE003E79A0 /* Project object */;
 }
