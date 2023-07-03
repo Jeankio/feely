@@ -28,6 +28,13 @@ struct FeelyPrincipalView: View {
                 SliderFeelySet(category: "Mood", sliderValue: viewStore.$moodInput)
                 SliderFeelySet(category: "Energy", sliderValue: viewStore.$energyInput)
             }
+            Button {
+                store.send(.userConfirmFeelys)
+            } label: {
+                Text("Confirmar")
+            }
+            .foregroundColor(Color("myBlue"))
+
         }
         .frame(maxHeight: .infinity)
         .background(Color("myGreen"))

@@ -13,7 +13,7 @@ struct Feely: ReducerProtocol {
     enum Action: BindableAction {
         case started
         case binding(BindingAction<State>)
-        
+        case userConfirmFeelys
     }
     
     var body: some ReducerProtocol<State, Action> {
@@ -23,7 +23,11 @@ struct Feely: ReducerProtocol {
                 return .none
             case .binding:
                 return .none
+            case .userConfirmFeelys:
+                return .none
             }
         }
+        
+        BindingReducer()
     }
 }
