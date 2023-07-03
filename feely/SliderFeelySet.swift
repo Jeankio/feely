@@ -1,16 +1,10 @@
-//
-//  ButtonPrincipalView.swift
-//  feely
-//
-//  Created by Jean Karel on 20/05/23.
-//
 
 import SwiftUI
 
 struct SliderFeelySet: View {
     var category: String
     
-    @State private var sliderValue: Double = 1.0
+    @Binding var sliderValue: Double
     
     var body: some View {
         Rectangle()
@@ -37,6 +31,6 @@ struct SliderFeelySet: View {
 
 struct ButtonPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderFeelySet(category: "Attention")
+        SliderFeelySet(category: "Attention", sliderValue: .constant(1.0))
     }
 }

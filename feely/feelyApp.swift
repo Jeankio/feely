@@ -1,17 +1,15 @@
-//
-//  feelyApp.swift
-//  feely
-//
-//  Created by Jean Karel on 19/05/23.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 @main
 struct feelyApp: App {
     var body: some Scene {
         WindowGroup {
-            FeelyPrincipalView()
+            FeelyPrincipalView(
+                store: Store(initialState: Feely.State(),
+                             reducer: Feely()
+                )
+            )
         }
     }
 }
