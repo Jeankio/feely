@@ -13,10 +13,10 @@ struct SliderFeelySet: View {
             .cornerRadius(20)
             .overlay {
                 HStack {
-                    Slider(value: $sliderValue, in: 1...100)
+                    Slider(value: $sliderValue, in: 0...1)
                         .padding()
                         .tint(Color("myGreen"))
-                    Text("\(Int(sliderValue))% \(category)")
+                    Text("\(Int(sliderValue * 100))% \(category)")
                         .foregroundColor(.white)
                         .font(.title2)
                         .bold()

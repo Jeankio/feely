@@ -18,7 +18,7 @@ struct FeelyPrincipalView: View {
     
     var body: some View {
         VStack {
-            CardFeelyUser()
+            CardFeelyUser(store: store)
                 .frame(height: 430)
                 .shadow(radius: 5)
                 .cornerRadius(20)
